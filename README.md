@@ -1,4 +1,4 @@
-![DSA](https://global-uploads.webflow.com/5f1085d926011644a65936b6/640aea59faba54aa9d07cc0b_Signup%20form%20with%20email%20verification%20with%20Mailjett.png "DSA")
+![DSA](otp.png "DSA")
 # OTP Registration App
 
 Welcome to the OTP Registration App repository! This application was built using the MERN stack to explore the functionality of OTP verification in real-life scenarios.
