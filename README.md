@@ -1,4 +1,4 @@
-![DSA]('otp.png "DSA")
+![DSA]("otp.png" "DSA")
 # OTP Registration App
 
 Welcome to the OTP Registration App repository! This application was built using the MERN stack to explore the functionality of OTP verification in real-life scenarios.
