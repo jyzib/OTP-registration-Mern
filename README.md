@@ -83,5 +83,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 
-![App Screenshot]('./otp.png')
+![App Screenshot]('/otp.png')
 
