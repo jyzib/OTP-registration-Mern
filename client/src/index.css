@@ -5,14 +5,16 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0c141e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  overflow: hidden;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -51,6 +53,13 @@ button, input {
   flex-direction: column;
   padding: 20px;
   gap: 10px;
+  /* From https://css.glass */
+background: rgba(0, 0, 0, 0.55);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 0, 0, 0.3);
   
 }
 button, input:hover {
@@ -70,10 +79,27 @@ button, input:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background: #dec4e5;
+    color: black;
   }
 }
 .otp{
   width: 10px;
   margin: 10px;
+}
+
+.boxx {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+button {
+  background: #dec4e5;
+  color: black;
+}
+
+
+.otp-box {
+  display: flex;
+  flex-direction: column;
 }
