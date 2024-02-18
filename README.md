@@ -1,3 +1,4 @@
+![otp](otp.png "otp")
 # OTP Registration App
 
 Welcome to the OTP Registration App repository! This application was built using the MERN stack to explore the functionality of OTP verification in real-life scenarios.
@@ -82,6 +83,9 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 This project is licensed under the [MIT License](LICENSE).
 
 
+<<<<<<< HEAD
 
 ![App Screenshot]('/otp.png')
 
+=======
+>>>>>>> 9c612388b0d350b31cbb5eac43a50eac043b5b81
