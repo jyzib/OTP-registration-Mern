@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config()
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
 let otp = "";
@@ -12,6 +13,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.status(200).json({ msg: "ok" });
 });
+
 
 const connectData = async () => {
   try {
@@ -41,11 +43,10 @@ const transporter = nodemailer.createTransport({
     service:"gmail",
     auth:{
         user:"jazibzaidi02@gmail.com",
-        pass:"tsjm fjqu ymwy fqcx"
+        pass:process.env.EMAILPASSWORD
     }
 
 })
-
 const moreOption = {
   from: "Amazon.com",
   to: email,
@@ -69,24 +70,24 @@ const moreOption = {
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             }
             .header {
-                background-color: #007bff;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
+              background-color: #007bff;
+              color: #fff;
+              padding: 20px;
+              text-align: center;
                 border-radius: 8px 8px 0 0;
             }
             .content {
-                padding: 20px;
-                text-align: center;
+              padding: 20px;
+              text-align: center;
             }
             .otp {
-                font-size: 24px;
+              font-size: 24px;
                 font-weight: bold;
                 color: #007bff;
             }
             .footer {
-                text-align: center;
-                padding-top: 20px;
+              text-align: center;
+              padding-top: 20px;
                 color: #666666;
             }
             .footer-content {
@@ -102,15 +103,15 @@ const moreOption = {
     font-weight: bolder;
     color: #25013c;
             }
-        </style>
+            </style>
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <h2>Email Verification</h2>
+            <h2>Email Verification</h2>
             </div>
             <div class="content">
-                <p class="bold">Hello,${name}</p>
+            <p class="bold">Hello,${name}</p>
                 <p>Your OTP for email verification is: <span class="otp">${otp}</span></p>
                 <p>Please use this OTP to verify your email address.</p>
                 <img src="https://supertokens.com/covers/email_verification_blog_banner.png" alt="Verification Image" style="max-width: 100%; height: auto;">
@@ -127,6 +128,7 @@ const moreOption = {
   `
 };
 
+// view engine: ejs
 
 
 try {
@@ -173,3 +175,5 @@ res.json({msg:"Faild",responce:false})
 app.listen(port, () => {
   console.log(`Server is running on port no ${port}`);
 });
+
+// to send the data t;o the client we have to send reqest to the client asap to send the data to the client then we might 
